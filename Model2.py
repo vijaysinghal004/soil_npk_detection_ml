@@ -144,7 +144,7 @@ def train_model(train_df):
 
     # Validate the model
     predictions = model.predict(X_val)
-    mse = mean_squared_error(y_val, predictions)
+    mse = mean_squared_error(y_val , predictions)
     print("Validation MSE:", mse)
 
     return model
@@ -168,8 +168,8 @@ if __name__ == "__main__":
     model = train_model(train_df)
 
     # Save the model
-    joblib.dump(model, "npk_predictor_model.pkl")
-    print("Model saved as 'npk_predictor_model.pkl'")
+    joblib.dump(model, "npk_predictor_model.tflite")
+    print("Model saved as 'npk_predictor_model.tflite'")
 
     # Save the feature extraction process
     print("Feature extraction and training completed!")

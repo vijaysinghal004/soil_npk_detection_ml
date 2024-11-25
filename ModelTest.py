@@ -111,7 +111,7 @@ def test_model_on_image(model, image_path):
 # Step 4: Load the trained model and test on an image
 if __name__ == "__main__":
     # Load the trained model from the saved file
-    model = joblib.load("npk_predictor_model.pkl")
+    model = joblib.load("npk_predictor_model.tflite")
 
     # Path to the image you want to test
     image_path ="C:/Users/vijay_jjyhjd9/Downloads/WhatsApp Image 2024-11-23 at 20.35.31_d2cbae08.jpg" #Replace with your image path
